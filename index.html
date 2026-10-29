@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Strength Checker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Password Strength Checker</h1>
+    <p class="intro">Enter a password to check how strong it is.</p>
+
+    <label for="password">Password</label>
+    <div class="password-row">
+      <input id="password" type="password" placeholder="Enter a password" autocomplete="off" spellcheck="false">
+      <button id="toggle" type="button">Show</button>
+    </div>
+
+    <div class="meter" aria-hidden="true"><div id="meterFill"></div></div>
+    <p id="result" role="status">Start typing to check your password.</p>
+    <p id="entropy">Shannon entropy: —</p>
+
+    <h2>Password checks</h2>
+    <ul id="checks">
+      <li id="length">At least 12 characters</li>
+      <li id="upper">Uppercase letter</li>
+      <li id="lower">Lowercase letter</li>
+      <li id="number">Number</li>
+      <li id="symbol">Special character</li>
+    </ul>
+
+    <h2>Suggestions</h2>
+    <p id="advice">Suggestions will appear here.</p>
+    <p class="privacy">🔒 Your password is checked in this browser only. It is not sent to a server or saved.</p>
+  </main>
+</body>
+</html>
